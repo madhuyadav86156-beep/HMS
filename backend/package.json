@@ -1,0 +1,25 @@
+{
+  "name": "@atithi/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/*.test.js",
+    "db:local": "node scripts/mongo-local.mjs",
+    "db:import-sqlite": "node scripts/import-sqlite.mjs",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "mongodb": "^6.21.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.4.3",
+    "@playwright/test": "^1.56.1"
+  }
+}
